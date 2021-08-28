@@ -24,7 +24,7 @@ We reviewed topics like:
 - [X] Cypress Custom Commands
 - [X] Cypress Assertions
 - [X] Cypress variables and aliases.
-- [X] Plugins: Browserstack, Mochawesome Reporter, Cypress Grep
+- [X] Plugins: Browserstack, Mochawesome Reporter, Cypress Grep, Xpath(Need to add an example, but the plugin is ready.)
 
  
 - ## 💻 Pre-requisites
