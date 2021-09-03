@@ -1,9 +1,10 @@
 // To install Xpath Plugin -> npm install -D cypress-xpath
-// Include the following command at support/index.js
+// Include the following command at support/index.js require('cypress-xpath')
 
 //Xpath -> XPath is defined as XML path. It is a syntax or
 //language for finding any element on the web page using the
-//XML path expression. XPath is used to find the location of any element on a webpage using HTML DOM structure.
+//XML path expression. XPath is used to find the location of
+//any element on a webpage using HTML DOM structure.
 
 //Common Xpath Structure
 /* //tagName[@attribute='value']  */
