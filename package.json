@@ -19,7 +19,7 @@
   "author": "joanmedia",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "7.7.0",
+    "cypress": "8.3.1",
     "cypress-grep": "^2.5.3",
     "cypress-mochawesome-reporter": "^2.2.0",
     "cypress-xpath": "^1.6.2"
