@@ -14,7 +14,7 @@ pipeline {
 
                 echo "BROWSER: ${params.BROWSER}"
 
-                sh "npx cypress run ${params}
+                sh "npx cypress run ${params}"
             }
         }
     }
