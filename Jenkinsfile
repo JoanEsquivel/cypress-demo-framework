@@ -1,28 +1,20 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-
-        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
-
-        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
-
-        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
-
-        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+        string(name: 'SPEC', defaultValue: 'cypress/integration/**/**', description: 'Ej: cypress/integration/pom/*.spec.js')
+        choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Pick the web browser you want to use to run your scripts')
     }
+
+    def params = "--browser ${BROWSER} --spec ${SPEC}}"
+
     stages {
-        stage('Example') {
+        stage('Regression Execution') {
             steps {
-                echo "Hello ${params.PERSON}"
+                echo "SPEC ${params.SPEC}"
 
-                echo "Biography: ${params.BIOGRAPHY}"
+                echo "BROWSER: ${params.BROWSER}"
 
-                echo "Toggle: ${params.TOGGLE}"
-
-                echo "Choice: ${params.CHOICE}"
-
-                echo "Password: ${params.PASSWORD}"
+                sh "npx cypress run ${params}
             }
         }
     }
