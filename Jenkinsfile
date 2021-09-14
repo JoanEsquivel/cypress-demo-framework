@@ -5,8 +5,6 @@ pipeline {
         choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Pick the web browser you want to use to run your scripts')
     }
 
-    def params = "--browser ${BROWSER} --spec ${SPEC}}"
-
     stages {
         stage('Regression Execution') {
             steps {
@@ -14,7 +12,7 @@ pipeline {
 
                 echo "BROWSER: ${params.BROWSER}"
 
-                sh "npx cypress run ${params}"
+                sh "npx cypress run --browser ${BROWSER} --spec ${SPEC}}"
             }
         }
     }
