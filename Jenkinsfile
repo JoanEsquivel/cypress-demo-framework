@@ -19,5 +19,8 @@ pipeline {
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
+        stage('Publish HTML Report'){
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+        }
     }
 }
