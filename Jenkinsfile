@@ -12,7 +12,7 @@ pipeline {
 
                 echo "BROWSER: ${params.BROWSER}"
 
-                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}}"
+                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
     }
