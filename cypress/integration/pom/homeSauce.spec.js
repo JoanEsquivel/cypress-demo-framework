@@ -9,7 +9,7 @@ describe('POM Implementation', () => {
 
     it('should login to inventory page', () => {
         homeSaucePage.typeUsername('standard_user');
-        homeSaucePage.typePassword('secret_sauce2');
+        homeSaucePage.typePassword('secret_sauce');
         homeSaucePage.clickLogin();
         inventoryPage.elements.titleSpan().should('have.text', 'test')
     });
