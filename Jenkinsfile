@@ -17,13 +17,12 @@ pipeline {
                 echo "BROWSER: ${params.BROWSER}"
                 bat "npm i"
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
-                slackSend channel: 'jenkins-example', message: 'Automation Build From Jenkins Started'
             }
         }
         stage('Publish HTML Report'){
             steps {
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
-                slackSend channel: 'jenkins-example', message: 'Automation Build Finished'
+                 slackSend channel: 'jenkins-example', message:  "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${BUILD_USER}\n More info at: ${env.BUILD_URL}"
             }
         }
     }
