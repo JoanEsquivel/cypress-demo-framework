@@ -1,7 +1,10 @@
 import groovy.json.JsonOutput
+
+def getBuildUser(){...}
+
 pipeline {
     environment{
-    BUILD_USER = ''
+        BUILD_USER = ''
     }
     agent any
     parameters {
