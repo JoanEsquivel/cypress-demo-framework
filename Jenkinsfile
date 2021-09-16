@@ -15,9 +15,6 @@ pipeline {
     stages {
         stage('Regression Execution') {
             steps {
-                echo "SPEC ${params.SPEC}"
-
-                echo "BROWSER: ${params.BROWSER}"
                 bat "npm i"
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
