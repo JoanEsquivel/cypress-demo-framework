@@ -1,5 +1,8 @@
 import groovy.json.JsonOutput
 pipeline {
+    environment{
+    BUILD_USER = ''
+    }
     agent any
     parameters {
         string(name: 'SPEC', defaultValue: 'cypress/integration/**/**', description: 'Ej: cypress/integration/pom/*.spec.js')
