@@ -17,9 +17,13 @@ pipeline {
             steps {
                 bat "npm i"
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
-                slackSend channel: 'jenkins-example', message:  "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Tests:${SPEC} executed at ${BROWSER}\n More info at: ${env.BUILD_URL}"
             }
+        }
+        stage('Publish and send){
+              steps{
+                  publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+                slackSend channel: 'jenkins-example', message:  "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Tests:${SPEC} executed at ${BROWSER}\n More info at: ${env.BUILD_URL}"
+              }
         }
     }
 }
