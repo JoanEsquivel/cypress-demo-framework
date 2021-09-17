@@ -13,10 +13,7 @@ def getBuildUser() {
 pipeline {
     agent any
     
-    // Set up local variables for your pipeline
     environment {
-        // test variable: 0=success, 1=fail; must be string
-        doError = '0'
         BUILD_USER = ''
     }
     
@@ -38,7 +35,6 @@ pipeline {
         }
     }
 
-      // Post-build actions
     post {
         always {
             script {
@@ -47,9 +43,9 @@ pipeline {
             
             slackSend channel: '#jenkins-example',
                 color: COLOR_MAP[currentBuild.currentResult],
-                message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${BUILD_USER}\n More info at: ${env.BUILD_URL}"
+                message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} by ${BUILD_USER}\n Tests:${SPEC} executed at ${BROWSER} \n More info at: ${env.BUILD_URL}"
             
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
         }
     }
 }
