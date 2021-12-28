@@ -27,6 +27,8 @@ We reviewed topics like:
 - [X] Plugins: Browserstack, Mochawesome Reporter, Cypress Grep, Xpath
 - [X] Dockerfile added.
 - [X] Jenkinsfile added.
+- [X] Github Actions & Gitlab CI/CD yml files.
+- [X] Typescript Configuration
 
  
 - ## 💻 Pre-requisites
