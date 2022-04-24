@@ -29,6 +29,7 @@ We reviewed topics like:
 - [X] Jenkinsfile added.
 - [X] Github Actions & Gitlab CI/CD yml files.
 - [X] Typescript Configuration
+- [X] Visual Testing with Applitools
 
  
 - ## 💻 Pre-requisites
