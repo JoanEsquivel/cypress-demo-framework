@@ -10,6 +10,14 @@
         "charts": true,
         "reportPageTitle": "Joan Media Demo Report",
         "embeddedScreenshots": true
+      },
+      "env": {
+        "db": {
+          "host": "localhost",
+          "user": "root",
+          "password": "",
+          "database": "proyecto_l"
+        }
       }
 
 }
