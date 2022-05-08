@@ -33,7 +33,7 @@ describe("DB Testing", function () {
       });
     });
   });
-  it("Update an Entry into the table and verify", function () {
+  it("Update a movie", function () {
     cy.task(
       "queryDb",
       `UPDATE movies SET genre = "test genre" WHERE title="Joker"`
@@ -46,7 +46,7 @@ describe("DB Testing", function () {
       }
     );
   });
-  it("Delete a Table", function () {
+  it("Delete the movie table", function () {
     cy.task("queryDb", `DROP TABLE movies`).then((result) => {
       expect(result.message).to.equal("");
     });
