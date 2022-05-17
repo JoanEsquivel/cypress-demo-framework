@@ -30,6 +30,7 @@ We reviewed topics like:
 - [X] Github Actions & Gitlab CI/CD yml files.
 - [X] Typescript Configuration
 - [X] Visual Testing with Applitools
+- [X] Database Testing using SQL
 
  
 - ## 💻 Pre-requisites
