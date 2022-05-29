@@ -21,7 +21,8 @@
   "license": "ISC",
   "devDependencies": {
     "@applitools/eyes-cypress": "^3.25.5",
-    "cypress": "^9.1.1",
+    "@cypress-audit/lighthouse": "^1.3.0",
+    "cypress": "^9.6.1",
     "cypress-grep": "^2.5.3",
     "cypress-mochawesome-reporter": "^3.0.1",
     "cypress-xpath": "^1.6.2",

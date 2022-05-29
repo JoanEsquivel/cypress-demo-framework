@@ -18,7 +18,8 @@
 import '@applitools/eyes-cypress/commands'
 
 import './commands'
-import 'cypress-mochawesome-reporter/register';
+import 'cypress-mochawesome-reporter/register'
+import '@cypress-audit/lighthouse/commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
