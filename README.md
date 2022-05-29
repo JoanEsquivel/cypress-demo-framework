@@ -31,6 +31,7 @@ We reviewed topics like:
 - [X] Typescript Configuration
 - [X] Visual Testing with Applitools
 - [X] Database Testing using SQL
+- [X] Lighthouse integration
 
  
 - ## 💻 Pre-requisites
