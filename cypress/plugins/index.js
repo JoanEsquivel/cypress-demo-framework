@@ -28,9 +28,7 @@ module.exports = (on, config) => {
 };
 
 module.exports = (on, config) => {
-  // optional: register cypress-grep plugin code
-  // https://github.com/bahmutov/cypress-grep
-  require("cypress-mochawesome-reporter/plugin")(on);
+  require('cypress-mochawesome-reporter/plugin')(on);
 };
 
 require("@applitools/eyes-cypress")(module);
