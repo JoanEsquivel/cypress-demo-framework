@@ -1,5 +1,5 @@
 {
-  "name": "cypress-e2e-framework",
+  "name": "cypress-demo-framework",
   "version": "1.0.0",
   "description": "E2E Framework Testing Cypress",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "cypress:runDefault": "cypress run --spec cypress/integration/pom/*.spec.js",
     "cypress:chrome": "cypress run --browser chrome --spec cypress/integration/pom/*.spec.js",
     "cypress:edge": "cypress run --browser edge --spec cypress/integration/pom/*.spec.js",
-    "cypress:runChromeHeadless": "cypress run --headless --browser chrome --spec cypress/integration/pom/*.spec.js --record --key 4bc50df7-5eee-4147-8eb3-ccea611c8d4b"
+    "cypress:runChromeHeadless": "cypress run --headless --browser chrome --spec cypress/integration/pom/*.spec.js --record --key b4a83474-73b5-4d86-b324-3a80a87e4391"
   },
   "keywords": [
     "e2e",
@@ -17,7 +17,7 @@
     "framework",
     "cypress"
   ],
-  "author": "joanmedia",
+  "author": "basha g",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^9.1.1",
