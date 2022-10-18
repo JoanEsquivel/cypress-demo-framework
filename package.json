@@ -4,12 +4,10 @@
   "description": "E2E Framework Testing Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "cypress:open": "cypress open",
-    "cypress:runDefault": "cypress run --spec cypress/integration/pom/*.spec.js",
-    "cypress:chrome": "cypress run --browser chrome --spec cypress/integration/pom/*.spec.js",
-    "cypress:edge": "cypress run --browser edge --spec cypress/integration/pom/*.spec.js",
-    "cypress:runChromeHeadless": "cypress run --headless --browser chrome --spec cypress/integration/pom/*.spec.js --record --key b4a83474-73b5-4d86-b324-3a80a87e4391"
+    "scripts": {
+    "cleanup": "rm -fr cypress/reports",
+    "cy_dashboard": "npx cypress run --record --key b4a83474-73b5-4d86-b324-3a80a87e4391"
+    "cy:report": "npx run cleanup && npx run cy_dashboard && npx run cy_report"	
   },
   "keywords": [
     "e2e",
