@@ -17,7 +17,7 @@
     "framework",
     "cypress"
   ],
-  "author": "basha g",
+  "author": "Gbasha786",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^9.1.1",
