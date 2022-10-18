@@ -17,9 +17,9 @@ describe('4 Commands Probably You Did NOT Know', () => {
 
     it('Check text depending on the browser', () => {
         if(Cypress.browser.name==='chrome'){
-            cy.get('div[class="string-major"] a').should('have.text','Chrome 91 on Linux')
+            cy.get('div[class="string-major"] a').should('have.text','Chrome 91 on linux')
         }else if(Cypress.browser.name === 'firefox'){
-            cy.get('div[class="string-major"] a').should('have.text','Firefox 90 on Linux')
+            cy.get('div[class="string-major"] a').should('have.text','Firefox 90 on linux')
         }
     });
     
